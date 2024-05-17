@@ -34,7 +34,6 @@ Console.WriteLine("-------------------------------");
 Console.WriteLine("1-Müşteri Ekleme");
 Console.WriteLine("2-Müşteri Silme");
 Console.WriteLine("3-Müşteri Listeleme");
-Console.WriteLine("4-Müşteri Güncelleme");
 Console.Write("Lütfen Yapmak istediğiniz İşlemi Seçiniz = ");
 int process = Convert.ToInt32(Console.ReadLine());
 
@@ -65,6 +64,9 @@ switch(process)
         Console.Write("Silinecek Müşterinin Id sini giriniz = ");
         int customerId = Convert.ToInt32(Console.ReadLine());
         customerManager.DeleteCustomer(customerId,customers );
+        break;
+    case 3:
+        customerManager.ListCustomer(customers);
         break;
     default:
         Console.WriteLine("Lütfen bir işlem seçiniz.");

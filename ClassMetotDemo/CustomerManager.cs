@@ -19,22 +19,6 @@ namespace ClassMetotDemo
             customers.RemoveAt(CustomeId-1);
             Console.WriteLine("Müşteri başarıyla silindi.");
         }
-        public void UpdateCustomer(int customerId, List<Customer> customers)
-        {
-            ListCustomer(customers);
-            Console.Write("Güncellemek istediğiniz kullanıcının id sini giriniz = ");
-            int _custonmerId;
-            _custonmerId=Convert.ToInt32(Console.ReadLine());
-            foreach (var customer in customers)
-            {
-                if (_custonmerId==customer.Id)
-                {
-                    Console.WriteLine(customer.Name);
-                }
-            }
-
-
-        }
         public void ListCustomer(List<Customer> customers)
         {
             foreach (var customer in customers)
